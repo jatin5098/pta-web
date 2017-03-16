@@ -6,11 +6,20 @@ import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app.routes';
 import { AppRouterComponent } from './app.router.component';
 import { AppComponent } from './app.component';
+import { AuthenticationComponent } from './authentication/authentication.component';
+import { PaDashboardComponent } from './pa-dashboard/pa-dashboard.component';
+import { TaDashboardComponent } from './ta-dashboard/ta-dashboard.component';
+import { DataGridComponent } from './common/data-grid/data-grid.component';
 
 @NgModule({
   declarations: [
+    AppRouterComponent,
     AppComponent,
-    AppRouterComponent
+    AuthenticationComponent,
+    PaDashboardComponent,
+    TaDashboardComponent,
+    DataGridComponent,
+
   ],
   imports: [
     BrowserModule,
