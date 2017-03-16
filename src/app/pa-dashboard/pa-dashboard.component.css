@@ -21,12 +21,16 @@
     border-left: 5px solid #5584ff;
 }
 
+.pa-dashboard .header-content {
+    padding: 0;
+}
+
 .pa-dashboard .header {
     background: #ffffff none repeat scroll 0 0;
     box-shadow: 0 1px 12px rgba(0, 0, 0, 0.04);
     display: inline-block !important;
     line-height: 23px;
-    padding: 15px;
+    padding: 15PX;
     transition: all 0.5s ease 0s;
     width: 100%;
     -webkit-transition: all 0.5s ease;
@@ -51,13 +55,14 @@
 }
 
 .left-panel {
-    background: #0e1a35;
+    background: #061c3f;
     color: #ffffff;
     padding: 0;
+    height: 100vh;
 }
 
 .right-panel {
-    padding: 0;
+    height: 100vh;
 }
 
 .dashboard-area {
@@ -66,7 +71,7 @@
 }
 
 .footer {
-    background: #0e1a35;
+    background: #061c3f;
     min-height: 60px;
     font-size: 12px;
 }
