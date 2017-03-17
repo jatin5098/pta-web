@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-data-grid',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./data-grid.component.css']
 })
 export class DataGridComponent implements OnInit {
-
-  constructor() { }
+  @Output() currentRoute = new EventEmitter();
+  route;
+  constructor(private router: Router) {
+    this.route = this.router.url;
+  }
 
   ngOnInit() {
+    this.currentRoute.emit(this.route);
   }
 
 }

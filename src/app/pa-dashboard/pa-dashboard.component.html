@@ -50,12 +50,13 @@
                     <div class="dashboard-area">
                         <div class="row">
                             <div col="col-md-12">
-                                <a class="btn btn-primary pull-right">Add New</a>
+                                <a class="btn btn-primary pull-right" *ngIf="currentRoute === '/pa-dashboard/lists'" (click)="navigateTo('/pa-dashboard/tenant-entry');" routerLinkActive="active">Add New</a>
+                                <a class="btn btn-primary pull-right" *ngIf="currentRoute === '/pa-dashboard/tenant-entry'" (click)="navigateTo('/pa-dashboard/lists');" routerLinkActive="active">Show All</a>
                             </div>
                         </div>
                         <div class="row">
                             <div col="col-md-12">
-                                <app-data-grid></app-data-grid>
+                                <router-outlet></router-outlet>
                             </div>
                         </div>
                     </div>
