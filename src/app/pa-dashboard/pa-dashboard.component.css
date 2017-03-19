@@ -21,6 +21,11 @@
     border-left: 5px solid #5584ff;
 }
 
+.side-nav .active a {
+    background: #122143;
+    border-left: 5px solid #5584ff;
+}
+
 .pa-dashboard .header-content {
     padding: 0;
 }

@@ -8,22 +8,22 @@
                 <form method="post">
                     <div class="form-group row">
                         <div class="col-xs-12 col-sm-12 col-md-12">
-                            <input type="text" class="form-control" name="name" placeholder="Name" />
+                            <input type="text" class="form-control" name="name" [(ngModel)]="tenant.name" placeholder="Name" />
                         </div>
                     </div>
                     <div class="form-group row">
                         <div class="col-xs-12 col-sm-12 col-md-12">
-                            <input type="text" class="form-control" name="category" placeholder="Category" />
+                            <input type="text" class="form-control" name="category" [(ngModel)]="tenant.category" placeholder="Category" />
                         </div>
                     </div>
                     <div class="form-group row">
                         <div class="col-xs-12 col-sm-12 col-md-12">
-                            <input type="text" class="form-control" name="domain" placeholder="Domain" />
+                            <input type="text" class="form-control" name="domain" [(ngModel)]="tenant.domain" placeholder="Domain" />
                         </div>
                     </div>
                     <div class="form-group row">
                         <div class="col-xs-12 col-sm-12 col-md-12 text-right">
-                            <input type="submit" class="btn btn-success" value="Process" />
+                            <input type="submit" class="btn btn-success" value="Process" (click)="saveTenant()" />
                             <input type="reset" class="btn btn-danger" value="Clear" />
                         </div>
                     </div>

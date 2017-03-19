@@ -1,8 +1,9 @@
 import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { PaDashboardComponent } from './pa-dashboard/pa-dashboard.component';
-import { DataGridComponent } from './common/data-grid/data-grid.component';
+import { TenantListComponent } from './tenant/tenant-list/tenant-list.component';
 import { TenantEntryComponent } from './tenant/tenant-entry/tenant-entry.component';
+
 
 
 const APP_ROUTES = [
@@ -20,7 +21,7 @@ const APP_ROUTES = [
         component: PaDashboardComponent,
         children: [
             { path: '', redirectTo: 'lists', pathMatch: 'full' },
-            { path: 'lists', component: DataGridComponent },
+            { path: 'lists', component: TenantListComponent },
             { path: 'tenant-entry', component: TenantEntryComponent }
         ]
     }
