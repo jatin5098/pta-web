@@ -7,8 +7,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./data-grid.component.css']
 })
 export class DataGridComponent implements OnInit {
-  @Output() currentRoute = new EventEmitter();
   route;
+  @Input() dataList;
+  @Output() currentRoute = new EventEmitter();
   constructor(private router: Router) {
     this.route = this.router.url;
   }
@@ -16,5 +17,7 @@ export class DataGridComponent implements OnInit {
   ngOnInit() {
     this.currentRoute.emit(this.route);
   }
-
+  viewTenantDashboard = (tenantId) => {
+    this.router.navigateByUrl('/pa-dashboard/tenant-profile');
+  };
 }

@@ -1,0 +1,35 @@
+.tenant-profile {
+    margin-top: 15px;
+}
+
+.panel-invi {
+    background-color: #ffffff;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    text-align: center
+}
+
+.box {
+    background-color: #eaeaea;
+    min-height: 150px;
+    box-sizing: border-box;
+    padding: 1em;
+}
+
+.hr {
+    border-bottom: 1.5px solid #ffffff;
+    margin: 5px 0;
+}
+
+.product-head {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.product-details {
+    font-size: 12px;
+    font-weight: normal;
+    text-align: center;
+}

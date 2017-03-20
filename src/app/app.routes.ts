@@ -3,6 +3,7 @@ import { AppComponent } from './app.component';
 import { PaDashboardComponent } from './pa-dashboard/pa-dashboard.component';
 import { TenantListComponent } from './tenant/tenant-list/tenant-list.component';
 import { TenantEntryComponent } from './tenant/tenant-entry/tenant-entry.component';
+import { TenantProfileComponent } from './tenant/tenant-profile/tenant-profile.component';
 
 
 
@@ -22,7 +23,8 @@ const APP_ROUTES = [
         children: [
             { path: '', redirectTo: 'lists', pathMatch: 'full' },
             { path: 'lists', component: TenantListComponent },
-            { path: 'tenant-entry', component: TenantEntryComponent }
+            { path: 'tenant-entry', component: TenantEntryComponent },
+            { path: 'tenant-profile', component: TenantProfileComponent }
         ]
     }
 ];

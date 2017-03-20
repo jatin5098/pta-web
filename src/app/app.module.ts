@@ -12,6 +12,7 @@ import { TaDashboardComponent } from './ta-dashboard/ta-dashboard.component';
 import { DataGridComponent } from './common/data-grid/data-grid.component';
 import { TenantEntryComponent } from './tenant/tenant-entry/tenant-entry.component';
 import { TenantListComponent } from './tenant/tenant-list/tenant-list.component';
+import { TenantProfileComponent } from './tenant/tenant-profile/tenant-profile.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { TenantListComponent } from './tenant/tenant-list/tenant-list.component'
     DataGridComponent,
     TenantEntryComponent,
     TenantListComponent,
+    TenantProfileComponent,
 
   ],
   imports: [

@@ -2,30 +2,18 @@
     <table class="table table-responsive table-hover table-striped table-condensed">
         <thead>
             <tr class="text-center text-info">
-                <td>Name</td>
-                <td>Type</td>
+                <td>Tenant Name</td>
+                <td>Plateform</td>
                 <td>Domain</td>
                 <td>Action</td>
             </tr>
         </thead>
         <tbody class="text-center">
-            <tr>
-                <td>Test Name</td>
-                <td>Test Type</td>
-                <td>Test Domain</td>
-                <td>Test Action</td>
-            </tr>
-            <tr>
-                <td>Test Name</td>
-                <td>Test Type</td>
-                <td>Test Domain</td>
-                <td>Test Action</td>
-            </tr>
-            <tr>
-                <td>Test Name</td>
-                <td>Test Type</td>
-                <td>Test Domain</td>
-                <td>Test Action</td>
+            <tr *ngFor="let list of dataList">
+                <td>{{list.name}}</td>
+                <td>{{list.category}}</td>
+                <td>{{list.domain}}</td>
+                <td><a class="btn btn-link" (click)="viewTenantDashboard(list._id)">Action</a></td>
             </tr>
         </tbody>
     </table>

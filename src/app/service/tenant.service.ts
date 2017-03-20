@@ -12,16 +12,22 @@ export class TenantService {
   }
 
   addTenantDetails = (tenant) => {
-    console.log(tenant);
     let endPoint = this.baseUrl + "/tenant/add";
     return this.http
-               .post(endPoint, tenant)
-               .subscribe(
-                  data => console.log(JSON.stringify(data)),
-                  error => alert(error),
-                  () => console.log("Finished GET")
-                );
-             
+      .post(endPoint, tenant)
+      .subscribe(
+      data => console.log(JSON.stringify(data)),
+      error => alert(error),
+      () => console.log("Finished GET")
+      );
+
+  };
+
+  getAllTenant = () => {
+    let endPoint = this.baseUrl + "/tenant/all";
+    return this.http
+      .get(endPoint)
+      .map(res => res.json());
   };
 
 }

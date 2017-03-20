@@ -16,7 +16,6 @@ export class AuthenticationComponent implements OnInit {
   }
 
   loginAction = () => {
-    console.log("Login Action");
     this.router.navigateByUrl('/pa-dashboard');
   };
 }
