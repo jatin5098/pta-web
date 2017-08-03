@@ -1,14 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthenticationService } from '../service/authentication.service';
 
 @Component({
   selector: 'app-authentication',
   templateUrl: './authentication.component.html',
-  styleUrls: ['./authentication.component.css']
+  styleUrls: ['./authentication.component.css'],
+  providers: [AuthenticationService]
 })
 export class AuthenticationComponent implements OnInit {
-
-  constructor(private router: Router) {
+  userName: String;
+  password: String;
+  constructor(
+    private router: Router,
+    private authenticationService: AuthenticationService
+  ) {
 
   }
 
@@ -16,6 +22,13 @@ export class AuthenticationComponent implements OnInit {
   }
 
   loginAction = () => {
-    this.router.navigateByUrl('/pa-dashboard');
+    this.userName = 'jatin.kumar';
+    this.password = 'password';
+    let user = {
+        userName: this.userName,
+        password: this.password
+    };
+    this.authenticationService.validateUserLogin(user);
+    // this.router.navigateByUrl('/pa-dashboard');
   };
 }
