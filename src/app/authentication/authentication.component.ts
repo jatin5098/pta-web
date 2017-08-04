@@ -11,6 +11,7 @@ import { AuthenticationService } from '../service/authentication.service';
 export class AuthenticationComponent implements OnInit {
   userName: String;
   password: String;
+  authData;
   constructor(
     private router: Router,
     private authenticationService: AuthenticationService
@@ -28,7 +29,18 @@ export class AuthenticationComponent implements OnInit {
         userName: this.userName,
         password: this.password
     };
-    this.authenticationService.validateUserLogin(user);
-    // this.router.navigateByUrl('/pa-dashboard');
+    this.authenticationService.validateUserLogin(user)
+      .subscribe(
+        data => this.authData = data,
+        error => console.error(error),
+        () => console.info("Finished GET")
+      );
+    if(this.authData) {
+      localStorage.setItem('userName', this.authData.userName);
+      localStorage.setItem('token', this.authData.token);
+      
+      this.router.navigateByUrl('/pa-dashboard');
+    }
+    
   };
 }
