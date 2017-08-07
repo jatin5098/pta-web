@@ -11,7 +11,7 @@ export class AuthenticationService {
     
     constructor(private http: Http) {
         this.baseUrl = app.httpBaseUrl;
-        this.reqHeader;
+        this.createAuthenticationHeaders();
     }
 
     createAuthenticationHeaders = () => {
@@ -24,7 +24,6 @@ export class AuthenticationService {
     }
 
     validateUserLogin = (user) => {
-        this.createAuthenticationHeaders();
         let endPoint = this.baseUrl + "/auth/user";
         return this.http
             .post(endPoint, user, this.reqHeader)     
@@ -32,7 +31,6 @@ export class AuthenticationService {
     }
     
     validateAuthToken = (token) => {
-        this.createAuthenticationHeaders();
         let endPoint = this.baseUrl + "/auth/token";
         return this.http
             .post(endPoint, {token}, this.reqHeader)     

@@ -64,7 +64,7 @@ export class AuthenticationComponent implements OnInit {
             if(this.authData.success) {
               localStorage.setItem('userName', this.authData.userName);
               localStorage.setItem(app.token, this.authData.token);      
-              this.router.navigateByUrl('/pa-dashboard');
+              this.router.navigateByUrl('/pa-dashboard/lists');
             } else {
               this.router.navigateByUrl('/app');
             }       

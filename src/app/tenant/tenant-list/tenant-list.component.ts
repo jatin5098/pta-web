@@ -5,21 +5,20 @@ import { TenantService } from '../../service/tenant.service';
   selector: 'app-tenant-list',
   templateUrl: './tenant-list.component.html',
   styleUrls: ['./tenant-list.component.css'],
-  providers: [TenantService]
+  providers: [
+  ]
 })
 export class TenantListComponent implements OnInit {
-  private tenantList: any;
-  constructor(private TenantService: TenantService) {
-    this.TenantService.getAllTenant()
-      .subscribe(
-      data => this.tenantList = data,
-      error => console.error(error),
-      () => console.info("Finished GET")
-      );
+  private tenantList: any[];
+  constructor(
+    private tenantService: TenantService
+  ) {
+    this.tenantList = [];
   }
 
   ngOnInit() {
-
+    setTimeout(() => {
+      this.tenantList = this.tenantService.getAllTenantList();
+    }, 100);
   }
-
 }

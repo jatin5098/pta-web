@@ -5,7 +5,8 @@ import { TenantService } from '../../service/tenant.service';
   selector: 'app-tenant-entry',
   templateUrl: './tenant-entry.component.html',
   styleUrls: ['./tenant-entry.component.css'],
-  providers: [TenantService]
+  providers: [
+  ]
 })
 export class TenantEntryComponent implements OnInit {
   tenant = {
@@ -13,7 +14,9 @@ export class TenantEntryComponent implements OnInit {
     category: '',
     domain: ''
   };
-  constructor(private TenantService: TenantService) { 
+  constructor(
+    private TenantService: TenantService
+  ) { 
   }
 
   ngOnInit() {

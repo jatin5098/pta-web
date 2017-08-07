@@ -36,4 +36,5 @@ import { TenantProfileComponent } from './tenant/tenant-profile/tenant-profile.c
   providers: [],
   bootstrap: [AppRouterComponent]
 })
-export class AppModule { }
+export class AppModule { 
+}

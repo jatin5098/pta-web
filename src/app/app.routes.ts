@@ -15,7 +15,7 @@ const APP_ROUTES = [
     },
     {
         path: 'app',
-        component: AppComponent
+        component: AppComponent        
     },
     {
         path: 'pa-dashboard',
